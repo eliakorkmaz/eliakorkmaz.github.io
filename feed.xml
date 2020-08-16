@@ -4,7 +4,7 @@
         <title>A Gridsome Minimal Blog</title>
         <link>https://eliakorkmaz.github.io/</link>
         <description>Best blog feed evah.</description>
-        <lastBuildDate>Sun, 16 Aug 2020 11:38:14 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 16 Aug 2020 11:40:27 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Gridsome Feed Plugin</generator>
         <item>
@@ -40,7 +40,7 @@ Aliquam ultrices ante a libero ultricies molestie. Sed bibendum sollicitudin met
             <guid>https://eliakorkmaz.github.io/first-post/</guid>
             <pubDate>Sat, 20 Apr 2019 00:00:00 GMT</pubDate>
             <content:encoded><![CDATA[
-This is the first post, it is written in Markdown.
+This is the my edited first post, it is written in Markdown.
 
 # Here's some big text
 
@@ -74,7 +74,8 @@ Inline? ```i think so```
 | three  | third option  |
 
 # Blockquotes
-> "You miss 100% of the shots you don't take -Wayne Gretzky" -Michael Scott]]></content:encoded>
+> "You miss 100% of the shots you don't take -Wayne Gretzky" -Michael Scott
+]]></content:encoded>
         </item>
     </channel>
 </rss>
