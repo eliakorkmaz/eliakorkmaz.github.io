@@ -4,78 +4,190 @@
         <title>A Gridsome Minimal Blog</title>
         <link>https://eliakorkmaz.github.io/</link>
         <description>Best blog feed evah.</description>
-        <lastBuildDate>Sun, 16 Aug 2020 13:44:46 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 19 Aug 2020 23:52:55 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Gridsome Feed Plugin</generator>
         <item>
-            <title><![CDATA[Third Post]]></title>
-            <link>https://eliakorkmaz.github.io/third-post/</link>
-            <guid>https://eliakorkmaz.github.io/third-post/</guid>
-            <pubDate>Thu, 23 Jan 2020 00:00:00 GMT</pubDate>
+            <title><![CDATA[Building a Blog with Gridsome & Publish it to Firebase / Github Pages]]></title>
+            <link>https://eliakorkmaz.github.io/building-a-blog-with-gridsome-and-publish-it-to-firebase-github-pages/</link>
+            <guid>https://eliakorkmaz.github.io/building-a-blog-with-gridsome-and-publish-it-to-firebase-github-pages/</guid>
+            <pubDate>Sun, 16 Aug 2020 00:00:00 GMT</pubDate>
             <content:encoded><![CDATA[
-```
-hello_world = 'hello world'
-print(hello_world)
-```]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[Second Post]]></title>
-            <link>https://eliakorkmaz.github.io/second-post/</link>
-            <guid>https://eliakorkmaz.github.io/second-post/</guid>
-            <pubDate>Wed, 25 Dec 2019 00:00:00 GMT</pubDate>
-            <content:encoded><![CDATA[
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla fringilla arcu sit amet nunc pulvinar sagittis. Quisque condimentum faucibus posuere. Etiam nisl ex, lobortis a felis a, ornare accumsan turpis. Etiam tristique lobortis nisl eu congue. Vivamus tempus enim pharetra sem rhoncus, eget facilisis turpis commodo. Aenean posuere ultricies erat, a dapibus tortor semper eget. Nullam sed cursus risus. Fusce massa ligula, varius pellentesque magna in, malesuada faucibus magna. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed dui turpis, fermentum ut varius non, sollicitudin quis elit. Sed dignissim enim id nulla vehicula, nec accumsan ante vestibulum. Donec luctus mollis mi ut iaculis. Aenean sit amet erat mi.
+This is my first blog post on Github Pages and thanks to Gridsome. Gridsome is a Vue based static website generator library. It's a cool product which provides you make static websites with tons of starters. I used one of them. So let's start how can we build another one with it.
 
-Pellentesque vehicula et urna eu imperdiet. Vestibulum fermentum dignissim mauris, consectetur facilisis risus ornare vitae. Etiam ut vulputate felis. Curabitur lobortis tempus erat sed molestie. Nullam cursus vulputate turpis, porttitor pellentesque enim pharetra non. Donec facilisis nunc sit amet justo varius vestibulum. Vestibulum suscipit elit sit amet vestibulum pellentesque. Ut maximus eu odio vel gravida. In vitae est quis mi sodales semper. Maecenas ac fringilla eros, non consectetur velit. Donec urna odio, aliquet vel urna non, sagittis vestibulum est. Maecenas nec fringilla ante, eget consectetur sapien. Sed in scelerisque sem.
+First start with install Gridsome with shell command tools. I used all Gridsome works with it's cli. Install it with `yarn` or `npm` 
 
-Nam vehicula nulla est, vitae maximus nisi sagittis vitae. Ut nec sagittis magna, sed gravida nunc. Donec ex lacus, cursus nec venenatis sit amet, finibus sed lacus. Sed pulvinar, tortor non pulvinar sodales, magna nulla aliquam ante, eu molestie lacus risus quis magna. Vestibulum ornare vulputate velit vel finibus. Vestibulum nibh risus, volutpat nec enim et, semper posuere mi. Proin dignissim et elit quis volutpat. Integer sagittis congue leo, at ornare turpis ultrices in. Sed id congue magna, eget eleifend odio. Pellentesque venenatis, eros sit amet molestie ultricies, justo lorem interdum sem, a mattis odio tellus id purus. Aliquam consectetur tortor a ipsum hendrerit, id vestibulum leo mattis. Morbi sem lectus, blandit ut magna at, tempor placerat ligula.
-
-Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut scelerisque quam at lobortis sodales. Nullam massa nisi, consectetur id faucibus malesuada, scelerisque nec elit. Vivamus a varius erat. Maecenas lacus orci, viverra non tristique ut, aliquam vitae nulla. Donec fringilla pretium lorem, et tincidunt felis consequat eget. Integer malesuada pretium turpis, a euismod orci varius eu. Suspendisse potenti. Ut aliquam, dolor ut aliquam auctor, velit neque porta magna, nec maximus tellus lacus at erat. Ut id tempor magna. Quisque gravida ipsum ac libero convallis ornare.
-
-Aliquam ultrices ante a libero ultricies molestie. Sed bibendum sollicitudin metus id suscipit. Aenean risus arcu, consectetur eu lectus sit amet, dapibus efficitur leo. Nam sagittis enim et mi ornare, sodales placerat quam porttitor. Sed venenatis diam vel dolor imperdiet maximus. Integer vitae odio diam. Vestibulum consequat libero at eros hendrerit, eu mattis purus iaculis. Morbi aliquam in ligula sed porta. Ut non enim porta, ultrices eros vel, lacinia mi. Nam luctus augue in iaculis suscipit.]]></content:encoded>
-        </item>
-        <item>
-            <title><![CDATA[First Post]]></title>
-            <link>https://eliakorkmaz.github.io/first-post/</link>
-            <guid>https://eliakorkmaz.github.io/first-post/</guid>
-            <pubDate>Sat, 20 Apr 2019 00:00:00 GMT</pubDate>
-            <content:encoded><![CDATA[
-This is the my edited first post, it is written in Markdown.
-
-# Here's some big text
-
-- and some lists 
-    - just to show off all of the different elements 
-
-### How about some code?
-
-``` 
-Yeah we've got that tooooooo!
+```js
+yarn global add @gridsome/cli
+npm install --global @gridsome/cli
 ```
 
-```swift
-let text = "Emrah Korkmaz"
-print(text)
+After the installing `Gridsome` let's start with a starters. 
+
+For this tutorial I choose a simple and good-looking starter template as you look below.
+It,s git link is: `https://gridsome.org/starters/gridsome-liebling-starter/`
+
+ ![Starter Theme](../../src/blogscreen.png)
+
+ Open your terminal, get the directory of where you want to download the starter.
+
+ `gridsome create my-blog https://github.com/noxify/gridsome-starter-skeleventy`
+
+ After entering this command, `Gridsome CLI` will download the starter and after that install the dependencies. This may take a while.
+
+ Open the project with your favorite editor, I use `VSCode` and typed that;
+
+ ```javascript
+ cd my-blog
+ gridsome develop
+ ```
+
+`Gridsome CLI` has two main functionality as `develop` and `build`.
+
+`develop` is make you serve the app in `localhost`
+
+`build` is make you build your app for production in `/dist` folder.
+
+After you serve in your localhost, check the app. IT'S LIVE.
+
+Check your editor; you will see the type of folders such as;
+
+```javascript
+cd my-blog
+vscode .
 ```
 
+We are ready to add a new post. In `content/posts` directory, add a file named as `new-blog.md`
 
-Inline? ```i think so```
+```md
+---
+title: "My New Post"
+description: "new blog post"
+date: 2020-08-20
+---
 
-## Images
-![Motorcycle](https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)
-![Campfire](https://images.unsplash.com/photo-1497906539264-eb74442e37a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80)
+I will tell my ideas in my new blog post
 
-## Tables
+```
 
-| Option | Description   |
-| ------ | ------------- |
-| one    | first option  |
-| two    | second option |
-| three  | third option  |
+Put these text into `new-blog.md` file and save the file, it will make the page refresh.
 
-# Blockquotes
-> "You miss 100% of the shots you don't take -Wayne Gretzky" -Michael Scott
-]]></content:encoded>
+In homepage you will see, the title of the blog added into list. Click it and show the result as below:
+
+![Blog Part](../../src/blog-inside.png)
+
+As you edit the `markdown` of the blog, you will see the changes of the result.
+
+So; basically this starter works like charm for basic editing; there is tons of starters works with dynamic CMS's like `Netlify` and `Contentful`. This starter works with manual editing markdown pages and we want to deploy it to `Github Pages` or `Firebase Hosting`. 
+
+## Hosting into Firebase
+
+Before starting into Firebase hosting, I would like to warn about that; you **MUST** configure Firebase Storage, before the hosting otherwise Firebase will give you an error about it. You can think like all settings are done but the hosting place is not ready until you set Firebase Storage.
+
+Start with naming your Firebase app, I choose an app like that.
+
+![Firebase-I](../../src/tutorial-blog-project.png)
+
+On next level, you have to install `Firebase-CLI` with `npm`.
+
+```js
+npm install -g firebase-tools
+```
+
+After you install it, login with your credential as typing the following command
+
+```js
+firebase login
+```
+
+After successfully login, you have to `init` firebase into your project folder with 
+
+```js
+firebase init
+```
+
+This command will ask some questions about the app. First of all is;
+
+> Which Firebase CLI features do you want to set up for this folder?
+
+Select `Hosting` option.
+
+Then you must associate the project with existing one or you have to create new one. As we already created one of them in `Firebase` named as `tutorial-blog-project` I will associate the project with this Firebase project. 
+
+Select `use of existing project` then find `tutorial-blog-project` option. 
+
+After selecting the project, there will be another series of the questions about Hosting Setup.
+
+> Your public directory is the folder (relative to your project directory) that
+> will contain Hosting assets to be uploaded with firebase deploy. If you
+> have a build process for your assets, use your build's output directory.
+
+> What do you want to use as your public directory? (public)
+
+This question is seeking a options that what folder of project you want to use it for production. As you know, in React, Vue or another web framework, we should use a `build` directory for production. In `Gridsome`, there's a directory called `dist` which contains the build. So I will use `dist` for this question.
+
+Another question is 
+
+> Configure as a single-page app (rewrite all urls to /index.html)?
+
+You have to choose Y (Yes) for this question because it's a single-page-app basically and it routes all url's from the index.html.
+
+Then it will finish for the all process.
+
+Let's take a build for our newbie blog 🥳
+
+Type `gridsome build` then there will be created `dist` directory.
+
+Firebase is ready to serve it.
+
+Deploy it with `firebase deploy`
+
+Yay 🤟 It's ready on `https://tutorial-blog-project.web.app/` or `https://whateveryourprojectname.web.app/` 😇
+
+It's done, so simple, so fast. 
+
+I amazed when I learn the how `Firebase Hosting` is fast and simple to serve any website.
+
+For any change in blog, maybe you can add new blog post, you have to get a build with 
+
+`gridsome build` then you must deploy with `firebase deploy`. So simple 😎
+
+Now, let's look at another deployment to `Github Pages`
+
+## Hosting into Github Pages
+
+There's a two simple way to hosting of `Gridsome` to Github Pages. Idealogy is so simple, you have to send your `build` directory into your Github repository named as your Github account. (It's important).
+
+There'a `npm` packages which handle this serves easily but I use manual way, I like this way much.
+
+Firsty you have to take a build for the project with `gridsome build`
+
+There's an output named as `dist` directory.
+
+Let's assume that your github account name is `veryverysimplename`. I assume there is an repository named `veryverysimplename.github.io` in Github. So, assume that you create this named repository and clone it with 
+
+`git clone https://veryverysimplename/veryverysimplename.github.io` 
+
+The directory is empty. Copy your `dist` directory into this `repository` folder.
+
+Then
+
+ `git add .`
+
+ `git commit -m "Add new blog page"`
+
+ `git push -u origin master`
+
+ It's Done.
+
+![Github Pages](../../src/githubpagessettings.png)
+
+This output is for my blog, in your repository settings, you will see the `Github Pages` serve details.
+
+
+
+I use and like Gridsome, I shared this blog post may helps others and thanks for your time and thanks for reading. 🤟
+Please feel free to reach me, comment about the blog post, you can contribute to post or fix any point may I have wrong about it.]]></content:encoded>
         </item>
     </channel>
 </rss>
