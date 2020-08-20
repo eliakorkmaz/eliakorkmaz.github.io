@@ -4,7 +4,7 @@
         <title>A Gridsome Minimal Blog</title>
         <link>https://eliakorkmaz.github.io/</link>
         <description>Best blog feed evah.</description>
-        <lastBuildDate>Wed, 19 Aug 2020 23:57:21 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 20 Aug 2020 00:00:01 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Gridsome Feed Plugin</generator>
         <item>
@@ -25,7 +25,7 @@ npm install --global @gridsome/cli
 After the installing `Gridsome` let's start with a starters. 
 
 For this tutorial I choose a simple and good-looking starter template as you look below.
-It,s git link is: `https://gridsome.org/starters/gridsome-liebling-starter/`
+It,s git link is: `https://github.com/noxify/gridsome-starter-skeleventy`
 
  ![Starter Theme](../../src/blogscreen.png)
 
