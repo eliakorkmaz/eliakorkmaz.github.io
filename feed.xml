@@ -4,9 +4,74 @@
         <title>A Gridsome Minimal Blog</title>
         <link>https://eliakorkmaz.github.io/</link>
         <description>Best blog feed evah.</description>
-        <lastBuildDate>Thu, 20 Aug 2020 08:01:19 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 24 Aug 2020 22:05:58 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Gridsome Feed Plugin</generator>
+        <item>
+            <title><![CDATA[Integrate Firebase Manually into iOS App]]></title>
+            <link>https://eliakorkmaz.github.io/integrate-firebase-manually-into-i-os-app/</link>
+            <guid>https://eliakorkmaz.github.io/integrate-firebase-manually-into-i-os-app/</guid>
+            <pubDate>Mon, 24 Aug 2020 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[
+Let's assume we want to build an app for iOS / macOS or tvOS. We only want to use Swift Package Manager as Package Manager and we know we have to use Firebase. Maybe you have similar reasons, you don't want to change project structure with using `Cocoapods` and maybe don't want to use `Carthage` etc. I encounter with this situation and solve with a little bit struggling way because even Google's documentation is not complete in this integration ways.
+
+First of all, I highly recommend you to read `Firebase` documentation about manual integration on here [Firebase Integration](https://firebase.google.com/docs/ios/setup#frameworks). Let's start making some manual integrations 🙂
+
+
+As you read in documentation, you have to download `Firebase SDK` files from Google. It took approximately ~200MB. You have to see a directory like below;
+
+![Firebase Directory](../../src/FirebaseDir.png)
+
+For basic integration, I've used `FirebaseAnalytics` but you've to decide directorys for your requiremets. If you want to use `Firestore` you will integrate `FirebaseFirestore` directory into the project structure.
+
+
+Now, for this tutorial scenario, we drag & drop `FirebaseAnalytics` directory into our project structure.
+
+Now we have to add  `-ObjC` flag into `Other Linker Settings` because of using `Objective-C` codebase in SDK.
+
+![Other Linker](../../src/OBJCLinker.png)
+
+We've added `-ObjC` flag into the project. Now we have to drag & drop `Firebase.h` file into the project. Then also if your project is a `Swift` project you have to drag & drop also `.modulemap` file.
+
+![Project Structure](../../src/ProjectStructure.png)
+
+After this addition, if you want to Run, the project will not run because there's a missing point. We actually use a `Bridging Header` as `Firebase.h` but we did not apply it to the `Xcode `for knowing it.
+
+
+In `Build Settings` search for `Objective-C Bridging Header` title, and after that add path of `Bridging Header` file. 
+
+If you add `Firebase.h` file into directly project's directory you can add as
+
+`$(SRCROOT)/Firebase.h`, or if you add it in another directory, you can add as
+
+`$(SRCROOT)/Directory-Name/Firebase.h`. 
+
+Now `Xcode` will connect the `SDK` with your project. You've set all of it.
+
+In `AppDelegate` file, add `import FirebaseCore` and configure the app like below.
+
+```swift
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    FirebaseApp.configure()
+    return true
+}
+```
+
+Run + look at the logs, you must be see `Firebase Analytics` configuration success logs. That's all, it worked 🎉
+
+If you looking for a reference project, here is the [Project Link](https://gitlab.com/xcodewarrior/firebaseintegration)
+
+You can comment, share your ideas with me, I would be happy to get a feedback.
+
+
+
+
+
+
+
+
+]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Building a Blog with Gridsome & Publish it to Firebase / Github Pages]]></title>
             <link>https://eliakorkmaz.github.io/building-a-blog-with-gridsome-and-publish-it-to-firebase-github-pages/</link>
