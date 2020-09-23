@@ -4,9 +4,129 @@
         <title>A Gridsome Minimal Blog</title>
         <link>https://eliakorkmaz.github.io/</link>
         <description>Best blog feed evah.</description>
-        <lastBuildDate>Mon, 24 Aug 2020 22:05:58 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 23 Sep 2020 21:17:26 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Gridsome Feed Plugin</generator>
+        <item>
+            <title><![CDATA[Deploy ReactJS Application on Amazon S3]]></title>
+            <link>https://eliakorkmaz.github.io/deploy-react-js-application-on-amazon-s3/</link>
+            <guid>https://eliakorkmaz.github.io/deploy-react-js-application-on-amazon-s3/</guid>
+            <pubDate>Wed, 23 Sep 2020 00:00:00 GMT</pubDate>
+            <content:encoded><![CDATA[
+I am building and working on ReactJS recently and I will hang with some cloud system for deployment our backend and fronend codebases. So in this blog post we will create a ReactJS application and we will deploy it in Amazon S3 then again we will push some codebases changes.
+
+So let's start with `John Wick` mode.
+
+I've planned to build an `ReactJS` application with contains a `John Wick` image. 
+
+`npx create-react-app thisisjohn`
+
+This will create standart `Javascript` boilerplate `ReactJS` starter.
+
+I made so tiny changes in `App.js` as you can see in below.
+
+```js
+import React from 'react';
+import JohnWick from './johnwick.jpg'
+
+function App() {
+  return (
+    <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+      <img src={JohnWick} style={{ height: 300, width: 300, borderRadius: 150, alignSelf: "center" }} />
+    </div>
+  );
+}
+
+export default App;
+```
+
+This is output of the website
+
+![Website](../../src/johnwickoutput.png)
+
+The `ReactJS` side is so simple because of this is no matter what we are trying to build for now, most important part of this tutorial is knowing about `Amazon Web Services` and especially `S3 Bucket`.
+
+Maybe you've heard about `S3 Bucket` in `Amazon`. It's static web server which you can collect your datas, files, or images. If you set it as serving and send it any `build` folder it can `serve` your app.
+
+First signin to your `Amazon Dashboard` select `S3` and click to `Create Bucket` and follow the screenshots.
+
+
+![First](../../src/first-john.png)
+
+![Second](../../src/second-john.png)
+
+![Third](../../src/third-john.png)
+
+![Fourth](../../src/four-john.png)
+
+After you set all settings for bucket, you have to make your bucket accessible. Go to `Your Bucket`->`Permissions`->`Bucket Policy` then paste it.
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Allow Public Access to All Objects",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3::::john-wick/*"
+        }
+    ]
+}
+```
+
+This will make your bucket accessible. `john-wick` is my bucket's name, so if you did it with another name you have to set it with that special name.
+
+## Pushing to Amazon S3
+
+In your `ReactJS` application, add 
+
+```json
+"deploy": "aws s3 sync build/ s3://john-wick --acl public-read"
+```
+
+into your `package.json`, this will send our `build/` directory into our `s3://john-wick` bucket.
+
+Before deploying, let's take our project's build with `npm run build`
+
+After getting successfully build run `npm run deploy`.
+
+Our `build` directory is in our bucket, take a look at to the bucket. You will see like a page like below.
+
+![s3withfiles](../../src/full-john.png)
+
+
+# SERVE IT
+
+In Bucket page, go to `Properties` section then you will see some options about bucket. 
+Click into `Static Web Hosting` and select `Use this bucket to host a website` option.
+There are some inputs, for now you have to set index document input as `index.html` then save it.
+
+You can check it out the walkthrought in below.
+
+![sssjohn](../../src/sss-john.png)
+
+
+In this section you will see your static hosted website domain like 
+
+`http://BUCKET-NAME.s3-website.us-east-2.amazonaws.com/`
+
+Open that link and you will see your website hosted in S3 🤟. 
+
+This is how it looks like.
+
+![finishjohn](../../src/finish-john.png)
+
+
+It's super easy to serve any web projects into Amazon S3 and it's so helpful for any web project also.
+
+
+Take Care
+
+🎧 👨‍💻 ⌨️
+]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Integrate Firebase Manually into iOS App]]></title>
             <link>https://eliakorkmaz.github.io/integrate-firebase-manually-into-i-os-app/</link>
