@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Software Development Blog</title>
+    <link>https://eliakorkmaz.github.io/</link>
+    <description>Recent content on Software Development Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Emrah Korkmaz</copyright>
+    <lastBuildDate>Wed, 25 Dec 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://eliakorkmaz.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About me</title>
+      <link>https://eliakorkmaz.github.io/about/</link>
+      <pubDate>Sat, 30 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://eliakorkmaz.github.io/about/</guid>
+      <description>It&amp;rsquo;s Emrah from Istanbul. Mostly I work on iOS projects and on the other side, I work on my personal projects based on iOS, macOS and Web development.
+Please feel free to reach me via my email emrahkrkm1@gmail.com
+hayoa </description>
+    </item>
+    
+    <item>
+      <title>Integrate Firebase Manually into iOS App</title>
+      <link>https://eliakorkmaz.github.io/posts/integrate-firebase-manually-into-ios-app/</link>
+      <pubDate>Wed, 25 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://eliakorkmaz.github.io/posts/integrate-firebase-manually-into-ios-app/</guid>
+      <description>Let&amp;rsquo;s assume we want to build an app for iOS / macOS or tvOS. We only want to use Swift Package Manager as Package Manager and we know we have to use Firebase. Maybe you have similar reasons, you don&amp;rsquo;t want to change project structure with using Cocoapods and maybe don&amp;rsquo;t want to use Carthage etc. I encounter with this situation and solve with a little bit struggling way because even Google&amp;rsquo;s documentation is not complete in this integration ways.</description>
+    </item>
+    
+  </channel>
+</rss>

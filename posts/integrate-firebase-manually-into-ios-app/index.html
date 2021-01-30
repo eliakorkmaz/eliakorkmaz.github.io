@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Integrate Firebase Manually into iOS App - Software Development Blog</title><meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Integrate Firebase Manually into iOS App" />
+<meta property="og:description" content="We are integrating Firebase SDK into iOS Application via manually" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://eliakorkmaz.github.io/posts/integrate-firebase-manually-into-ios-app/" />
+<meta property="article:published_time" content="2019-12-25T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-12-25T00:00:00+00:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Integrate Firebase Manually into iOS App"/>
+<meta name="twitter:description" content="We are integrating Firebase SDK into iOS Application via manually"/>
+<script src="https://eliakorkmaz.github.io/js/feather.min.js"></script>
+	
+	<link href="https://eliakorkmaz.github.io/css/fonts.css" rel="stylesheet">
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://eliakorkmaz.github.io/css/main.css" /><link rel="stylesheet" type="text/css" href="https://eliakorkmaz.github.io/css/dark.css" media="(prefers-color-scheme: dark)" />
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://eliakorkmaz.github.io/">Software Development Blog</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/about">About</a>
+		
+		<a href="/tags">Tags</a>
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Integrate Firebase Manually into iOS App</h1>
+			<div class="meta">Posted on Dec 25, 2019</div>
+		</div>
+		
+
+		<section class="body">
+			<p>Let&rsquo;s assume we want to build an app for <code>iOS</code> / <code>macOS</code> or <code>tvOS</code>. We only want to use <code>Swift Package Manager</code> as Package Manager and we know we have to use Firebase. Maybe you have similar reasons, you don&rsquo;t want to change project structure with using <code>Cocoapods</code> and maybe don&rsquo;t want to use <code>Carthage</code> etc. I encounter with this situation and solve with a little bit struggling way because even Google&rsquo;s documentation is not complete in this integration ways.</p>
+<p>First of all, I highly recommend you to read <code>Firebase</code> documentation about manual integration on here <a href="https://firebase.google.com/docs/ios/setup#frameworks">Firebase Integration</a>. Let&rsquo;s start making some manual integrations 🙂</p>
+<p>As you read in documentation, you have to download <code>Firebase SDK</code> files from Google. It took approximately ~200MB. You have to see a directory like below;</p>
+<p><img src="/posts/images/first.png" alt="Folders Screenshot"></p>
+<p>For basic integration, I&rsquo;ve used <code>FirebaseAnalytics</code> but you&rsquo;ve to decide directorys for your requiremets. If you want to use Firestore you will integrate <code>FirebaseFirestore</code> directory into the project structure.</p>
+<p>Now, for this tutorial scenario, we drag &amp; drop <code>FirebaseAnalytics</code> directory into our project structure.</p>
+<p>Now we have to add <code>-ObjC</code> flag into <code>Other Linker Settings</code> because of using <code>Objective-C</code> codebase in SDK.</p>
+<p><img src="/posts/images/second.png" alt="Folders Screenshot"></p>
+<p>We&rsquo;ve added <code>-ObjC</code> flag into the project. Now we have to drag &amp; drop <code>Firebase.h</code> file into the project. Then also if your project is a Swift project you have to drag &amp; drop also <code>.modulemap</code> file.</p>
+<p><img src="/posts/images/third.png" alt="Project Structure"></p>
+<p>After this addition, if you want to <code>Run</code>, the project will not run because there&rsquo;s a missing point. We actually use a <code>Bridging Header</code> as <code>Firebase.h</code> but we did not apply it to the <code>Xcode</code> for knowing it.</p>
+<p>In <code>Build Settings</code> search for <code>Objective-C Bridging Header</code> title, and after that add path of <code>Bridging Header</code> file.</p>
+<p>If you add <code>Firebase.h</code> file into directly project&rsquo;s directory you can add as <code>$(SRCROOT)/Firebase.h</code>, or if you add it in another directory, you can add as <code>$(SRCROOT)/Directory-Name/Firebase.h</code></p>
+<p>Now Xcode will connect the SDK with your project. You&rsquo;ve set all of it.</p>
+<p>In <code>AppDelegate</code> file, add import <code>FirebaseCore</code> and configure the app like below.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">application</span>(<span style="color:#66d9ef">_</span> application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -&gt; Bool {
+    FirebaseApp.configure()
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>
+}
+</code></pre></div><p><code>Run</code> + look at the logs, you must be see <code>Firebase Analytics</code> configuration success logs. That&rsquo;s all, it worked 🎉</p>
+<p>If you looking for a reference project, here is the <a href="https://gitlab.com/xcodewarrior/firebaseintegration">Project Link</a></p>
+<p>You can reach out me by email, I would be happy to get a feedback.</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/swift">swift</a></li>
+					
+					<li><a href="/tags/firebase">firebase</a></li>
+					
+					<li><a href="/tags/ios">ios</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+	</article>
+</main>
+<footer>
+<hr><a class="soc" href="https://github.com/eliakorkmaz" title="GitHub"><i data-feather="github"></i></a>|<a class="soc" href="https://stackoverflow.com/users/4334113/elia" title="Stackoverflow"><i data-feather="code"></i></a>|⚡️
+	2021  © Emrah Korkmaz |  
+</footer>
+
+
+<script>
+      feather.replace()
+</script></div>
+    </body>
+</html>

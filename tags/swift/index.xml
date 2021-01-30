@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>swift on Software Development Blog</title>
+    <link>https://eliakorkmaz.github.io/tags/swift/</link>
+    <description>Recent content in swift on Software Development Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© Emrah Korkmaz</copyright>
+    <lastBuildDate>Wed, 25 Dec 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://eliakorkmaz.github.io/tags/swift/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Integrate Firebase Manually into iOS App</title>
+      <link>https://eliakorkmaz.github.io/posts/integrate-firebase-manually-into-ios-app/</link>
+      <pubDate>Wed, 25 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://eliakorkmaz.github.io/posts/integrate-firebase-manually-into-ios-app/</guid>
+      <description>Let&amp;rsquo;s assume we want to build an app for iOS / macOS or tvOS. We only want to use Swift Package Manager as Package Manager and we know we have to use Firebase. Maybe you have similar reasons, you don&amp;rsquo;t want to change project structure with using Cocoapods and maybe don&amp;rsquo;t want to use Carthage etc. I encounter with this situation and solve with a little bit struggling way because even Google&amp;rsquo;s documentation is not complete in this integration ways.</description>
+    </item>
+    
+  </channel>
+</rss>
