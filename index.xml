@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Emrah Korkmaz</copyright>
-    <lastBuildDate>Wed, 25 Dec 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://eliakorkmaz.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://eliakorkmaz.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About me</title>
       <link>https://eliakorkmaz.github.io/about/</link>
@@ -17,6 +17,16 @@
       <description>It&amp;rsquo;s Emrah from Istanbul. Mostly I work on iOS projects and on the other side, I work on my personal projects based on iOS, macOS and Web development.
 Please feel free to reach me via my email emrahkrkm1@gmail.com
 hayoa </description>
+    </item>
+    
+    <item>
+      <title>Introduction to Access Controls in Swift</title>
+      <link>https://eliakorkmaz.github.io/posts/access-controls-in-swift/</link>
+      <pubDate>Sat, 30 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://eliakorkmaz.github.io/posts/access-controls-in-swift/</guid>
+      <description>In Swift language, Access Controls are features that restricts access over your code and module. You can specify them over classes, structs, modules and variables. There are 5 different Access Level currently and let&amp;rsquo;s check out how to use them?
+Open Access In Swift world, you must heard about modules, I mean not the folder represented modules like in a single Xcode application. I mean the module is that may 3rd party library from Cocoapods, Swift Package Manager or Carthage.</description>
     </item>
     
     <item>
