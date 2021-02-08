@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Emrah Korkmaz</copyright>
-    <lastBuildDate>Sat, 30 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://eliakorkmaz.github.io/tags/swift/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://eliakorkmaz.github.io/tags/swift/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Swift Higher Order Functions</title>
+      <link>https://eliakorkmaz.github.io/posts/swift-higher-order-functions/</link>
+      <pubDate>Sun, 07 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://eliakorkmaz.github.io/posts/swift-higher-order-functions/</guid>
+      <description>Let&amp;rsquo;s examine Higher Order Functions in Swift Programming Language. Higher Order Functions are basically generic functions on Swift Standart Template Library to handle some processes on Collections with easier way to use.
+Map Map is the one of the best known higher-order function. Let&amp;rsquo;s start with the description of it.
+func map&amp;lt;T&amp;gt;(_ transform: (Element) throws -&amp;gt; T) rethrows -&amp;gt; [T] As you can see, it&amp;rsquo;s generic and there is an callback to transform Element to T type.</description>
+    </item>
+    
     <item>
       <title>Introduction to Access Controls in Swift</title>
       <link>https://eliakorkmaz.github.io/posts/access-controls-in-swift/</link>
