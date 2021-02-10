@@ -26,8 +26,10 @@ func map&amp;lt;T&amp;gt;(_ transform: (Element) throws -&amp;gt; T) rethrows -&
       
       <guid>https://eliakorkmaz.github.io/about/</guid>
       <description>It&amp;rsquo;s Emrah from Istanbul. Mostly I work on iOS projects and on the other side, I work on my personal projects based on iOS, macOS and Web development.
-Please feel free to reach me via my email emrahkrkm1@gmail.com
-hayoa </description>
+You can check my last projects;
+iOS - CallBlocker - Call Blocking app using CallKit extension and InAppPurchases
+iOS - EarnMoney - Online Course Lecturing System Twilio &amp;amp; webRTC &amp;amp; InAppPurchases
+macOS - Scanner Unlimited - Cocoa App Client for File Storage Application, using Firebase.</description>
     </item>
     
     <item>
